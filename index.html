@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" 
+    href="https://www.svgrepo.com/show/530646/briefcase.svg" 
+    type="image/svg">
+    <title>Калькулятор стоимости автомобиля</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор стоимости автомобиля</h1>
+        <table>
+            <tr>
+                <td>Марка автомобиля:</td>
+                <td>
+                    <select id="carBrand">
+                        <option value="">Выберите марку</option>
+                        <option value="Reno">Reno</option>
+                        <option value="Opel">Opel</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Jaguar">Jaguar</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Модель автомобиля:</td>
+                <td>
+                    <select id="carModel">
+                        <option value="">Сначала выберите марку</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Тип топлива:</td>
+                <td>
+                    <input type="radio" name="fuelType" value="бензин"> Бензин
+                    <input type="radio" name="fuelType" value="дизель"> Дизель
+                    <input type="radio" name="fuelType" value="газ"> Газ
+                    <input type="radio" name="fuelType" value="электричество"> Электричество
+                </td>
+            </tr>
+            <tr>
+                <td>Объем двигателя (л):</td>
+                <td><input type="number" id="engineVolume" min="1.1" max="3.5" step="0.1"></td>
+            </tr>
+            <tr>
+                <td>Состояние автомобиля:</td>
+                <td>
+                    <input type="radio" name="carCondition" value="новый"> Новый
+                    <input type="radio" name="carCondition" value="подержанный"> Подержанный
+                </td>
+            </tr>
+            <tr id="ownersRow" style="display:none;">
+                <td>Количество владельцев:</td>
+                <td>
+                    <input type="radio" name="owners" value="1-2"> 1-2
+                    <input type="radio" name="owners" value="более 3"> Более 3
+                </td>
+            </tr>
+            <tr>
+                <td>Способ оплаты:</td>
+                <td>
+                    <input type="radio" name="paymentMethod" value="картой"> Картой
+                    <input type="radio" name="paymentMethod" value="наличными"> Наличными
+                    <input type="radio" name="paymentMethod" value="счет на ЮЛ"> Счет на юридическое лицо
+                </td>
+            </tr>
+        </table>
+        <div>
+            <h2>Стоимость автомобиля: <span id="price">0</span> руб.</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
